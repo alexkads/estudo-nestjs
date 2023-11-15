@@ -1,1 +1,7 @@
 get http://localhost:3000
+
+###
+get http://localhost:3000/categories
+
+###
+get http://localhost:3000/categories/3

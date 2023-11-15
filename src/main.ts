@@ -1,9 +1,12 @@
 import { NestFactory } from '@nestjs/core';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { AppModule } from './app.module';
+import { PrimaExceptionFilter } from './exceptions.filters/prisma.exception-filter';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+  app.enableCors();
+  app.useGlobalFilters(new PrimaExceptionFilter());
 
   const config = new DocumentBuilder()
     .setTitle('Estudo de NestJS')
