@@ -7,7 +7,7 @@ async function bootstrap() {
 
   const config = new DocumentBuilder()
     .setTitle('Estudo de NestJS')
-    .setDescription('prjeto para estudo da Framework NestJS')
+    .setDescription('prjeto para estudo da framework NestJS')
     .setVersion('1.0')
     .addTag('NestJS')
     .build();

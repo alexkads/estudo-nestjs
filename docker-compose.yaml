@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  db:
+    image: mariadb:latest
+    container_name: mysql-estudo-nestjs
+    restart: always
+    ports:
+      - 3306:3306 
+    environment:
+      MARIADB_ROOT_PASSWORD: root
+      MARIADB_DATABASE: estudo-nestjs
+      MARIADB_USER: root
+      MARIADB_PASSWORD: root
+    volumes:
+      - ./mariadb-data:/var/lib/mysql
+
